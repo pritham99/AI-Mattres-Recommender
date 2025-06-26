@@ -9,19 +9,25 @@ function Recommender() {
   const [recommendation, setRecommendation] = useState("");
   const username = localStorage.getItem("username") || "Guest";
 
-  const handleSubmit = async () => {
-    try {
-      const response = await fetch("https://ai-mattres-recommender.onrender.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ lifestyle, sleep_style: sleepStyle, back_pain: backPain, climate })
-      });
-      const data = await response.json();
-      setRecommendation(data.match);
-    } catch (error) {
-      setRecommendation("Error fetching recommendation.");
-    }
-  };
+const handleSubmit = async () => {
+  try {
+    const response = await fetch("https://ai-mattres-recommender.onrender.com/recommend", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        lifestyle,
+        sleep_style: sleepStyle,
+        back_pain: backPain,
+        climate
+      })
+    });
+    const data = await response.json();
+    setRecommendation(data.match);
+  } catch (error) {
+    setRecommendation("Error fetching recommendation.");
+  }
+};
+
 
   return (
     <div className="recommender-container">
