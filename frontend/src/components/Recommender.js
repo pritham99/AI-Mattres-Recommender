@@ -11,7 +11,7 @@ function Recommender() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:5000/recommend", {
+      const response = await fetch("https://ai-mattres-recommender.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ lifestyle, sleep_style: sleepStyle, back_pain: backPain, climate })
