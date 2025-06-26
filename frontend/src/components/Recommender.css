@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to top right, #1e2a3a, #2f3e46, #4e5969);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.recommender-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  text-align: center;
+  backdrop-filter: blur(15px);
+  max-width: 700px;
+  width: 100%;
+  animation: fadeIn 1s ease;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #ffd369;
+}
+
+.greeting {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+select {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #3d4b5a;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  background: #4a5a6a;
+}
+
+select option {
+  background-color: #3d4b5a;
+  color: #fff;
+}
+
+
+button {
+  background-color: #ff4c68;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff2e4c;
+}
+
+.result h2 {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  color: #ffd369;
+}
+
+.result p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

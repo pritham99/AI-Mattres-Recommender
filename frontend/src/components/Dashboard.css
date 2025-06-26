@@ -1,0 +1,103 @@
+.dashboard {
+  background: radial-gradient(circle at 20% 30%, #2c3e50 0%, #1b2735 40%, #090a0f 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 30px 20px 80px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.dashboard h2 {
+  font-size: 1.5rem;
+  color: #ffe066;
+}
+
+.mattress-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.mattress-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.mattress-card:hover {
+  transform: scale(1.05);
+}
+
+.mattress-card h2 {
+  color: #ffe066;
+  margin-bottom: 10px;
+}
+
+.mattress-card p {
+  color: #f1f1f1;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.confused-button {
+  margin-top: 40px;
+  background: #ff3c75;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.confused-button:hover {
+  background: #ff0055;
+}
+.dashboard::before,
+.dashboard::after {
+  content: "";
+  position: absolute;
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dashboard::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.08;
+  animation: starTwinkle 5s infinite alternate;
+}
+
+.dashboard::after {
+  background: url('data:image/svg+xml;utf8,<svg fill="gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64 13.38A9 9 0 1110.62 2.36 7 7 0 0021.64 13.38z"/></svg>') no-repeat center center;
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.7;
+}
+
+@keyframes starTwinkle {
+  0% { opacity: 0.06; }
+  100% { opacity: 0.12; }
+}
